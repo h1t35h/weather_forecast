@@ -1,5 +1,6 @@
 import argparse
 from open_weather import get_weather
+from graphics import display_weather
 
 def main():
     parser = argparse.ArgumentParser(
@@ -9,7 +10,7 @@ def main():
 
     parser.add_argument('-c','--city')
     args = parser.parse_args()
-    print(get_weather(args.city))
+    display_weather(get_weather(args.city))
 
 
 if __name__== '__main__':
